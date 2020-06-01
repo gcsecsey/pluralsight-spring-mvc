@@ -18,7 +18,7 @@
     <table>
         <tr>
             <td>
-                <spring:message code="name" />
+                <spring:message code="name" />:
             </td>
             <td>
                 <form:input path="name"/>
