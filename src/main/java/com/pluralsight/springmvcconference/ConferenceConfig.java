@@ -66,4 +66,12 @@ public class ConferenceConfig implements WebMvcConfigurer {
     templateResolver.setSuffix(".html");
     return templateResolver;
   }
+
+  @Bean
+  public SpringTemplateEngine templateEngine() {
+    SpringTemplateEngine templateEngine = new SpringTemplateEngine();
+    templateEngine.setTemplateResolver(templateResolver());
+    templateEngine.setEnableSpringELCompiler(true); //expression language compiler for shorthands
+    return templateEngine;
+  }
 }
